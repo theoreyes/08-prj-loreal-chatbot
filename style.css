@@ -15,7 +15,7 @@ body {
 
 .page-wrapper {
   width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 /* header */
@@ -25,7 +25,7 @@ body {
 }
 
 .site-title {
-  font-family: "DM Sans";
+  font-family: "Arimo";
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -37,14 +37,14 @@ body {
 }
 
 .chat-window {
-  min-height: 360px;
+  min-height: 440px;
   max-height: 650px;
   height: auto;
   border: 1px solid #000;
   padding: 20px;
-  font-family: "DM Sans";
+  font-family: "Arimo";
   font-size: 22px;
-  line-height: 1.5;
+  line-height: 1.55;
   overflow-y: auto;
   background: #fafafa;
   transition: all 0.4 ease;
@@ -71,11 +71,15 @@ body {
   margin-top: 16px;
 }
 
+#userInput {
+  font-family: "DM Sans";
+}
+
 .chat-form input {
   flex: 1;
-  padding: 12px;
+  padding: 0px 15px;
   border: 1px solid #ccc;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .chat-form input:focus {
@@ -128,7 +132,8 @@ body {
 .site-footer {
   margin: 60px 0 40px;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
+  font-family: 'DM Sans';
   color: #666;
 }
 
@@ -147,7 +152,7 @@ body {
 }
 
 #site-header-logo {
-  margin-bottom: 3%;
+  margin-bottom: 17px;
   width: 300px;
 }
 
@@ -155,40 +160,44 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-left: 15%;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
 }
 
 .prompt-text {
   max-width: 100%;
   word-wrap: break-word;
-  background: #dbb368;
-  padding: 5px;
+  background: #f7eaed;
+  color: #000000;
+  padding: 7px 15px;
   border-radius: 5px;
-  border: 1px solid;
+  border: 1px solid #000000;
 }
 
 .reply-window {
   display: flex;
   justify-content: flex-start;
   margin-right: 15%;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
 }
 
 .reply-text {
   max-width: 100%;
   word-wrap: break-word;
-  background: #fff8ec;
-  padding: 5px;
+  background: #fbf8f3;
+  padding: 7px 15px;
   border-radius: 5px;
-  border: 1px solid;
+  border: 1px solid #757575;
 }
 
-#init-text {
-  display: inline;
-  padding: 10px 5px;
+.reply-text ol, ul {
+  margin-left: 40px;
 }
 
-.reply-text ul,
-.reply-text ol {
-  margin-left: 20px;
+@media (max-width: 500px) {
+  .chat-form input {
+    font-size: 18px;
+  }
+  .chat-window {
+    font-size: 18px;
+  }
 }

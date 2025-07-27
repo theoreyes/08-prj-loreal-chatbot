@@ -120,16 +120,20 @@ function removeThinking() {
 // Displays initial message to user
 function displayInitMessage() {
   chatWindow.textContent = ''; // Avoids odd spacing of init message
+  const initMsgDiv = document.createElement('div');
   const initMsgP = document.createElement('p');
   initMsgP.textContent = `👋 Hello! How can I help you today?`;
   initMsgP.classList.add('reply-text');
+  initMsgDiv.classList.add('reply-window');
+  initMsgDiv.id = 'init-window';
   initMsgP.id = 'init-text';
-  chatWindow.appendChild(initMsgP);
+  initMsgDiv.appendChild(initMsgP);
+  chatWindow.appendChild(initMsgDiv);
 }
 
 // Removes initial message to user
 function removeInitMessage() {
-  let initBubble = document.getElementById('init-text');
+  let initBubble = document.getElementById('init-window');
   if (initBubble)
     initBubble.remove();
 }
@@ -142,7 +146,7 @@ function scrollUX() {
     const containerTop = chatWindow.getBoundingClientRect().top;
     const elementTop = latestPrompt.getBoundingClientRect().top;
 
-    const offset = elementTop - containerTop - 10;
+    const offset = elementTop - containerTop - 6;
 
     chatWindow.scrollTo({
       top: chatWindow.scrollTop + offset,
